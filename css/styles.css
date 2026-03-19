@@ -103,8 +103,34 @@ html {
 
 @media (max-width: 768px) {
     .left-orb-column {
-        left: 20px;
-        /* display: none; */
+        left: 14px;
+        top: 78px;
+        max-height: calc(100vh - 92px);
+        align-items: flex-start;
+    }
+
+    .left-orb-column .noyo-section-heading {
+        text-align: left;
+        align-self: flex-start;
+    }
+
+    .left-orb-column .noyo-orb-link {
+        background: none;
+    }
+
+    .left-orb-column .noyo-orb {
+        border-radius: 0;
+        box-shadow: none;
+        background-color: transparent;
+        background-size: 92% auto;
+        background-position: center;
+        filter: drop-shadow(0 0 12px rgba(197, 162, 83, 0.2));
+    }
+
+    .left-orb-column .noyo-orb:hover {
+        box-shadow: none;
+        filter: drop-shadow(0 0 16px rgba(197, 162, 83, 0.28));
+        transform: translateY(-4px) scale(1.03);
     }
     body {
         padding-left: 0 !important;
