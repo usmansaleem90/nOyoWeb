@@ -103,6 +103,7 @@ html {
 
 @media (max-width: 768px) {
     .left-orb-column {
+        left: 20px;
         /* display: none; */
     }
     body {
@@ -171,9 +172,10 @@ html {
         grid-template-columns: 1fr !important;
     }
     .footer-content {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        column-gap: 20px !important;
+        row-gap: 0 !important;
         text-align: center;
-        gap: 30px !important;
     }
     .footer-bottom {
         flex-direction: column;
@@ -226,7 +228,23 @@ html {
         margin-bottom: 36px;
     }
     .footer-content {
-        gap: 24px !important;
+        column-gap: 16px !important;
+    }
+
+    .footer-column h4 {
+        font-size: 0.65rem;
+        letter-spacing: 0.1em;
+        margin-bottom: 12px;
+    }
+
+    .footer-column ul li {
+        margin-bottom: 8px;
+    }
+
+    .footer-column ul li a {
+        font-size: 0.72rem;
+        line-height: 1.35;
+        word-break: break-word;
     }
 }
 
@@ -250,8 +268,8 @@ html {
 .noyo-bottom-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 60px;
-    column-gap: 20px;
+    row-gap: 68px;
+    column-gap: 32px;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -264,6 +282,16 @@ html {
 .noyo-bottom-grid .noyo-orb {
     width: 190px;
     height: 190px;
+    /* Slightly stronger glow: bright core + short falloff so halos stay separate */
+    box-shadow:
+        0 0 18px rgba(212, 175, 55, 0.34),
+        0 0 32px rgba(197, 162, 83, 0.16);
+}
+
+.noyo-bottom-grid .noyo-orb:hover {
+    box-shadow:
+        0 0 24px rgba(212, 175, 55, 0.4),
+        0 0 38px rgba(197, 162, 83, 0.18);
 }
 
 .noyo-bottom-grid .noyo-orb-text {
@@ -276,8 +304,8 @@ html {
 @media (max-width: 600px) {
     .noyo-bottom-grid {
         grid-template-columns: repeat(2, 1fr);
-        row-gap: 40px;
-        column-gap: 10px;
+        row-gap: 48px;
+        column-gap: 18px;
     }
     .noyo-bottom-grid .noyo-orb {
         width: 140px;
