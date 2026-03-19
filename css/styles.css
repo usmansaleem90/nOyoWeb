@@ -103,7 +103,7 @@ html {
 
 @media (max-width: 768px) {
     .left-orb-column {
-        display: none;
+        /* display: none; */
     }
     body {
         padding-left: 0 !important;
